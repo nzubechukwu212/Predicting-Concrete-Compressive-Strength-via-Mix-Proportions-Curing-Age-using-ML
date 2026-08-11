@@ -1,0 +1,44 @@
+# Concrete Compressive Strength Prediction
+
+This project predicts concrete compressive strength using an XGBoost model and a Streamlit user interface.
+
+## Project Files
+
+- `streamlit_app.py` - Streamlit web interface for entering concrete mix features and viewing strength predictions.
+- `app.py` - FastAPI prediction service (optional, not required for the Streamlit app).
+- `concrete_data.csv` - Dataset used for training or analysis.
+- `xgb_concrete_model.json` - Trained XGBoost model saved in JSON format.
+- `xgb_concrete_model.pkl` - Alternative serialized model file.
+- `model_features.json` - List of model feature column names.
+- `requirement.txt` - Python dependencies needed to run the project.
+
+## Dependencies
+
+Install required packages with:
+
+pip install -r requirement.txt
+
+The main dependencies are:
+
+- `pandas`
+- `xgboost`
+- `streamlit`
+
+## Run the Streamlit App
+
+Start the app from the project folder with:
+
+streamlit run streamlit_app.py
+
+Then open the local URL shown in the terminal.
+
+## Usage
+
+1. Enter values for the concrete mix features.
+2. Click `Predict`.
+3. The app returns the predicted compressive strength in MPa.
+
+## Notes
+
+- The Streamlit app is the recommended interface for this project.
+- `app.py` can be used if you want a separate API-based prediction endpoint, but it is optional.
