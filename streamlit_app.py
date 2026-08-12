@@ -39,4 +39,3 @@ if st.button("Predict"):
     dmatrix = xgb.DMatrix(data)
     prediction = model.predict(dmatrix)
     st.success(f"Predicted concrete compressive strength: {float(prediction[0]):.2f} MPa")
-c
